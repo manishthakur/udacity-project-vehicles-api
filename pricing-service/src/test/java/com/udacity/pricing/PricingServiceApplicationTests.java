@@ -31,7 +31,7 @@ public class PricingServiceApplicationTests {
     }
 
     @Test
-    public void greetingShouldReturnDefaultMessage() throws Exception {
+    public void greetingShouldReturnDefaultMessage() {
         assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/services/price?vehicleId=2",
                 Price.class).getPrice()).isNotNull().isPositive();
     }
